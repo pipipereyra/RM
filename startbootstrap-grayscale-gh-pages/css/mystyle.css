@@ -1,0 +1,21 @@
+#video{
+	border: solid 30px black;
+	/*border-radius: 20px;*/
+	border-image: url(../img/border.png) 30 stretch;
+}
+
+#videos{
+	background-image: url:(../img/zimbabwe.jpg),
+					  url:(..)
+
+}
+
+@media (min-width:992px){
+	#mainNav{
+		background-color: rgba(0,100,0,0.5);
+	}
+	#mainNav.navbar-shrink{
+		/*background-color: rgba(0,100,0,0.5);*/
+		background-image: linear-gradient(green, yellow, red, black);
+	}
+}
