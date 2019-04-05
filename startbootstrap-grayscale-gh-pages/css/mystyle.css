@@ -1,3 +1,9 @@
+@font-face{
+	font-family: hp;
+	src: url(../font/hp.TTF);
+}
+
+
 #video{
 	border: solid 30px black;
 	/*border-radius: 20px;*/
@@ -5,8 +11,11 @@
 }
 
 #videos{
-	background-image: url:(../img/zimbabwe.jpg),
-					  url:(..)
+	background-image: url(../img/zimbabwe.jpg),
+					  url(../img/zimbabweflag.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 100% 0%, center;
 
 }
 
@@ -16,6 +25,24 @@
 	}
 	#mainNav.navbar-shrink{
 		/*background-color: rgba(0,100,0,0.5);*/
-		background-image: linear-gradient(green, yellow, red, black);
+		background-image: linear-gradient(white,green, yellow, red, black);
 	}
+	#mainNav.navbar-shrink .nav-link.active {
+		color: black;
+		outline: none;
+		border-bottom: 0.50rem solid #F0D735;
+	  }
+	
+
+}
+
+#videos h1{
+	font-family: hp;
+	color: white;
+	text-shadow: 0px 0px 5px black;
+	/*transform: translate(50px, 100px);*/
+}
+#videos a:hover i{
+	color: darkred;
+	text-shadow: 0px 0px 10px darkred;
 }
