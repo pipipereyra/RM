@@ -11,11 +11,11 @@
 }
 
 #videos{
-	background-image: url(../img/zimbabwe.jpg),
-					  url(../img/zimbabweflag.png);
-	background-size: cover;
+	background-image: url(../img/zimbabweflag.png),
+						url(../img/zimbabwe.jpg);
+	background-size: 15%,cover;
 	background-repeat: no-repeat;
-	background-position: 100% 0%, center;
+	background-position: 0% 0%, center;
 
 }
 
@@ -40,7 +40,7 @@
 	font-family: hp;
 	color: white;
 	text-shadow: 0px 0px 5px black;
-	/*transform: translate(50px, 100px);*/
+	transform: rotate(50deg);
 }
 #videos a:hover i{
 	color: darkred;
