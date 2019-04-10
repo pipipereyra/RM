@@ -5,9 +5,16 @@
 
 
 #video{
-	border: solid 30px black;
+	border-radius: 50%;
+	/*box-shadow:
+                1px 1px #53a7ea,
+                2px 2px #53a7ea,
+                3px 3px #53a7ea;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);*/
+	/*border: solid 30px black;*/
 	/*border-radius: 20px;*/
-	border-image: url(../img/border.png) 30 stretch;
+	/*border-image: url(../img/border.png) 30 stretch;*/
 }
 
 #videos{
@@ -21,11 +28,11 @@
 
 @media (min-width:992px){
 	#mainNav{
-		background-color: rgba(0,100,0,0.5);
+		background-color: rgba(0, 59, 0, 0.5);
 	}
 	#mainNav.navbar-shrink{
-		/*background-color: rgba(0,100,0,0.5);*/
-		background-image: linear-gradient(white,green, yellow, red, black);
+		/*background-color: rgba(0,100,0,0.5);
+		background-image: linear-gradient(white,green, yellow, red, black);*/
 	}
 	#mainNav.navbar-shrink .nav-link.active {
 		color: black;
@@ -40,7 +47,15 @@
 	font-family: hp;
 	color: white;
 	text-shadow: 0px 0px 5px black;
-	transform: rotate(50deg);
+	transform: rotate(0deg);
+
+}
+
+#videos h1:hover{
+	transform: translateX(100px) rotate(50deg);
+	 transition-duration: 2s;
+	 text-shadow: #000000;
+}
 }
 #videos a:hover i{
 	color: darkred;
