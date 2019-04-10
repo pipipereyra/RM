@@ -6,6 +6,11 @@
 
 #video{
 	border-radius: 50%;
+	/*transition-property: transform;
+	transition-duration: 5s;
+	transition-delay: 1s;
+	transition-timing-function: cubic-bezier(.33,.32,.69,.77);*/
+	
 	/*box-shadow:
                 1px 1px #53a7ea,
                 2px 2px #53a7ea,
@@ -61,3 +66,24 @@
 	color: darkred;
 	text-shadow: 0px 0px 10px darkred;
 }
+#video:hover{
+	border-radius:5%;
+	transition-property: ease;
+	transition-duration: 5s;
+	transition-delay: 1s;
+	transition-timing-function: cubic-bezier(.39,.12,.2,1.03);
+}
+/*@keyframes h1 {
+	from {background-color: red;}
+	to {background-color: yellow;}
+	}
+	
+	div {
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		animation-name: h1;
+		animation-duration: 4s;
+	  }*/
+
+	
