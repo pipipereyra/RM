@@ -40,28 +40,15 @@ var loopa;
 				video.src = listvideo[indicevideo].src;
 				playvideo();
 			}
-			
-			
-			function playaudio(){
-			setVolumeAudio();
-			audio.play();
-			loopa = setInterval(reproaudio, 1000);
+			function prevvideo(){
+				if(indicevideo > listvideo.length-3){
+					indicevideo--;
+				}
+				else{indicevideo=0;}
+				video.src = listvideo[indicevideo].src;
+				playvideo();
 			}
-			function reproaudio(){
-				var tempo = audio.currentTime;
-				var total = audio.duration;
-				repro_a.innerHTML = tempo.toFixed(0)+"/"+total.toFixed(0)+"s";
-			}
-			function setVolumeAudio(){
-				audio.volume = setvolume.value;
-				volpor.innerHTML = audio.volume*100+"%";
-			}
-			
-			function pauseaudio(){
-			audio.pause();
-			
-			}
-			function stopaudio(){
-			audio.pause();
-			audio.currentTime = 0;
-			}
+
+
+
+	

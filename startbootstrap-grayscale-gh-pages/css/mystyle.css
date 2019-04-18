@@ -5,21 +5,21 @@
 
 
 #video{
-	border-radius: 50%;
-	/*transition-property: transform;
+
+	transition-property: transform;
 	transition-duration: 5s;
 	transition-delay: 1s;
 	transition-timing-function: cubic-bezier(.33,.32,.69,.77);*/
 	
-	/*box-shadow:
+	box-shadow:
                 1px 1px #53a7ea,
                 2px 2px #53a7ea,
                 3px 3px #53a7ea;
         -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);*/
-	/*border: solid 30px black;*/
-	/*border-radius: 20px;*/
-	/*border-image: url(../img/border.png) 30 stretch;*/
+        transform: translateX(-3px);
+	border: solid 30px black;
+	
+	border-image: url(../img/border.png) 18 stretch;
 }
 
 #videos{
@@ -36,8 +36,8 @@
 		background-color: rgba(0, 59, 0, 0.5);
 	}
 	#mainNav.navbar-shrink{
-		/*background-color: rgba(0,100,0,0.5);
-		background-image: linear-gradient(white,green, yellow, red, black);*/
+		background-color: rgba(0,100,0,0.5);
+		background-image: linear-gradient(#63D678, white);
 	}
 	#mainNav.navbar-shrink .nav-link.active {
 		color: black;
@@ -53,25 +53,36 @@
 	color: white;
 	text-shadow: 0px 0px 5px black;
 	transform: rotate(0deg);
-
 }
 
+
 #videos h1:hover{
-	transform: translateX(100px) rotate(50deg);
+	transform: rotate(360deg);
 	 transition-duration: 2s;
 	 text-shadow: #000000;
 }
+
+#videos h3:hover{
+	transition-timing-function: ease-in;
+	 transition-duration: 2s;
+	 text-shadow: #000000;
+	 transform: rotateY(360deg);
+	 }
+#videos h3{
+	font-family: hp;
+	color: white;
+	text-shadow: 0px 0px 5px black;
 }
 #videos a:hover i{
 	color: darkred;
 	text-shadow: 0px 0px 10px darkred;
 }
 #video:hover{
-	border-radius:5%;
+	
 	transition-property: ease;
 	transition-duration: 5s;
 	transition-delay: 1s;
-	transition-timing-function: cubic-bezier(.39,.12,.2,1.03);
+	transition-timing-function: cubic-bezier(.86,.18,.35,.85);
 }
 /*@keyframes h1 {
 	from {background-color: red;}
@@ -86,4 +97,34 @@
 		animation-duration: 4s;
 	  }*/
 
+	#audios h1{
+	font-family: hp;
+	color: white;
+	text-shadow: 0px 0px 5px black;
+	transform: rotate(0deg);
+	}
 	
+	#audios h1:hover{
+	transform: rotateX(360deg);
+	 transition-duration: 2s;
+	 text-shadow: #000000;
+	 }
+
+	 #audios h2{
+	font-family: hp;
+	color: white;
+	text-shadow: 0px 0px 5px black;
+	
+	}
+
+	#audios h2:hover{
+	transition-timing-function: ease-in;
+	 transition-duration: 2s;
+	 text-shadow: #000000;
+	 transform: rotateY(360deg);
+	 }
+
+	 #audios a:hover i{
+	color: darkred;
+	text-shadow: 0px 0px 10px darkred;
+	 
