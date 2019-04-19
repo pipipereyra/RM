@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jssor.slider.min.js"></script>
+        <script>
+            jQuery(document).ready(function ($) {
+                var _SlideshowTransitions = [
+                    {$Duration: 1200, $Opacity: 2},
+                    {$Duration: 1200, x: 4, y: -4, $Zoom: 11, $Rotate: 1, $Easing: {$Left: $Jease$.$InCubic, $Top: $Jease$.$InCubic, $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$OutQuad, $Rotate: $Jease$.$InCubic}, $Opacity: 2, $Round: {$Rotate: 0.7}},
+                    {$Duration: 500, $Delay: 30, $Cols: 8, $Rows: 4, $Clip: 15, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationZigZag, $Easing: $Jease$.$OutQuad}
+                ];
+
+                var options = {
+                    $AutoPlay: 1,
+                    $Loop: 1,
+                    $SlideDuration: 650,
+                    $Idle: 100,
+                    $BulletNavigatorOptions: {
+                        $Class: $JssorBulletNavigator$,
+                        $ChanceToShow: 2
+                    },
+                    $SlideshowOptions: {
+                        $Class: $JssorSlideshowRunner$,
+                        $Transitions: _SlideshowTransitions,
+                        $TransitionsOrder: 1,
+                        $ShowLink: true
+                    },
+                    $ArrowNavigatorOptions: {
+                      $Class: $JssorArrowNavigator$,          //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 2,                       //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 2,                         //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1                               //[Optional] Steps to go for each navigation request, default value is 1
+                    }
+                };
+                var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+            });
+        </script>        
+
+        <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
+            <!-- Slides Container -->
+            <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 300px;">
+                <div><img u="image" src="img/image1.jpg" /></div>
+                <div><img u="image" src="img/image2.jpg" /></div>
+                <div><img u="image" src="img/image3.jpg" /></div>
+				<div><img data-u="image" src="img/shback2.png"/></div>
+				<div><img data-u="image" src="img/wolf.png"/></div>
+            </div>
+
+
+            <!--#region Bullet Navigator Skin Begin -->
+            <!-- Help: https://www.jssor.com/development/slider-with-bullet-navigator.html -->
+            <style type="text/css">
+                .jssorb062 {position:absolute;}
+                .jssorb062 .i {position:absolute;cursor:pointer;}
+                .jssorb062 .i .b {fill:#c71b1b;fill-opacity:.5;stroke:#c71b1b;stroke-width:400;stroke-miterlimit:10;stroke-opacity:0.5;}
+                .jssorb062 .i:hover .b {fill-opacity:.8;}
+                .jssorb062 .iav .b {fill:#6bda23;fill-opacity:1;stroke:#da0cda;stroke-opacity:.7;stroke-width:2000;}
+                .jssorb062 .iav:hover .b {fill-opacity:.6;}
+                .jssorb062 .i.idn {opacity:.3;}
+            </style>
+
+            <!-- bullet navigator container -->
+            <div data-u="navigator" class="jssorb062" style="bottom:16px;right:250px;" data-autocenter="1" >
+                <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800" />
+                    </svg>
+                </div>
+            </div>
+            <!--#endregion Bullet Navigator Skin End -->
+            
+             <!--#region Arrow Navigator Skin Begin -->
+        <!-- Help: https://www.jssor.com/development/slider-with-arrow-navigator.html -->
+        <style>
+            .jssora092 {display:block;position:absolute;cursor:pointer;}
+            .jssora092 .c {fill:#11a6bb;fill-opacity:0.5;}
+            .jssora092 .a {fill:#1019da;}
+            .jssora092:hover {opacity:.8;}
+            .jssora092.jssora092dn {opacity:.5;}
+            .jssora092.jssora092ds {opacity:.3;pointer-events:none;}
+        </style>
+        <div data-u="arrowleft" class="jssora092" style="width:24px;height:40px;top:0px;left:-1px;" data-autocenter="2" data-scale="0.75" data-scale-left="0">
+            <svg viewBox="-199 -3000 9600 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <path class="c" d="M-199-2428.1C317.2-2538.7,851.8-2600,1401-2600c4197.3,0,7600,3402.7,7600,7600 s-3402.7,7600-7600,7600c-549.2,0-1083.8-61.3-1600-171.9V-2428.1z"></path>
+                <polygon class="a" points="4806.7,1528.5 4806.7,1528.5 4806.7,2707.8 2691.1,5000 4806.7,7292.2 4806.7,8471.5 4806.7,8471.5 1602,5000 "></polygon>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora092" style="width:24px;height:40px;top:0px;right:-1px;" data-autocenter="2" data-scale="0.75" data-scale-right="0">
+            <svg viewBox="-199 -3000 9600 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <path class="c" d="M9401,12428.1c-516.2,110.6-1050.8,171.9-1600,171.9c-4197.3,0-7600-3402.7-7600-7600 s3402.7-7600,7600-7600c549.2,0,1083.8,61.3,1600,171.9V12428.1z"></path>
+                <polygon class="a" points="7401,5000 4196.3,8471.5 4196.3,8471.5 4196.3,7292.2 6311.9,5000 4196.3,2707.8 4196.3,1528.5 4196.3,1528.5 "></polygon>
+            </svg>
+        </div>
+        <!--#endregion Arrow Navigator Skin End -->
+
+
+        </div>
+    </body>
+</html>
