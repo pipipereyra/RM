@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -92,42 +92,65 @@
 
         <h3 id='video_title'></h3>
         <br>
-        <a href="javascript:playvideo()">
-            <i class="fa fa-2x fa-play"></i>
-        </a>
-        <a href="javascript:pausevideo()">
-          <i class="fa fa-2x fa-pause"></i>
-        </a>
-        <a href="javascript:stopvideo()">
-          <i class="fa fa-2x fa-stop"></i>
-        </a>
-        <a href="javascript:nextvideo()">
-          <i class="fa fa-2x fa-step-forward"></i>
-        </a>
-        <hr>
-        <h2>Áudio</h2>
-        <audio id='audio' width="600" height="400">
-        <source src='audio/audio1.mp3' type="audio/mp3">
-		</audio>
-		<br>
-		<div id="repro_a"></div>
-        <a href="javascript:playaudio()">
-          <i class="fa fa-2x fa-play"></i>
-        </a>
-        <a href="javascript:pauseaudio()">
-          <i class="fa fa-2x fa-pause"></i>
-        </a>
-        <a href="javascript:stopaudio()">
-          <i class="fa fa-2x fa-stop"></i>
-        </a>
-		<input type='range' id='setvolume' step='0.1' min='0' max='1' value='0.5'
-		onchange='setVolumeAudio()'><span id='volpor'></span>
+        <div id="video-control">
+          <a href="javascript:prevvideo()">
+            <i class="fa fa-2x fa-step-backward"></i>
+          </a>
+          <a href="javascript:playvideo()">
+              <i class="fa fa-2x fa-play"></i>
+          </a>
+          <a href="javascript:pausevideo()">
+            <i class="fa fa-2x fa-pause"></i>
+          </a>
+          <a href="javascript:stopvideo()">
+            <i class="fa fa-2x fa-stop"></i>
+          </a>
+          <a href="javascript:nextvideo()">
+            <i class="fa fa-2x fa-step-forward"></i>
+          </a>
         </div>
-
+        <hr>
+		</div>
       </div>
     </div>
 
   </section>
+  <section id='audios'>
+	<div class='conatiner'>
+		<div class='row'>
+			<div class='col-md-8 offset-md-2 text-center'>
+				<h1>Áudio</h1>
+					<h2 id='audio_title'></h2>
+					<audio id='audio' width="600" height="400">
+						<!--
+						<source src='audio/audio1.mp3' type="audio/mp3">
+						-->
+					</audio>
+					<br>
+					<div id="repro_a">
+						<a href="javascript:prevaudio()">
+							<i class="fa fa-2x fa-step-backward"></i>
+						</a>
+						<a href="javascript:playaudio()">
+							<i class="fa fa-2x fa-play"></i>
+						</a>
+						<a href="javascript:pauseaudio()">
+							 <i class="fa fa-2x fa-pause"></i>
+						</a>
+						 <a href="javascript:stopaudio()">
+							 <i class="fa fa-2x fa-stop"></i>
+						</a>
+						<a href="javascript:nextaudio()">
+							 <i class="fa fa-2x fa-step-forward"></i>
+						 </a>
+						<input type='range' id='setvolume' step='0.1' min='0' max='1' value='0.5'
+						onchange='setVolumeAudio()'><span id='volpor'></span>
+					</div>
+			</div>
+		</div>
+	</div>
+
+
 
   <!-- Projects Section -->
   <section id="projects" class="projects-section bg-light">
@@ -279,6 +302,9 @@
   <script src="js/grayscale.js"></script>
   <!-- Player de Video-->
   <script src="js/player.js"></script>
+  <!-- Player de audio -->
+  <script src="js/player_audio.js"></script>
+
 
 </body>
 
