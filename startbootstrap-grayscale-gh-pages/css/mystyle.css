@@ -157,3 +157,20 @@
 #musica{
 	background-color: antiquewhite;
 }
+@media screen and (max-width: 870px){
+	#vidio{
+		background-size: 20%, 100%, 100%;
+	}
+	#video{
+		width: 90%;
+	}
+}
+
+@media (min-width: 992px){
+#mainNav.navbar-shrink .nav-link:hover{
+color: white;
+}
+}
+#about{
+	background-image: linear-gradient(#474747,black, #452604, #754209, #75620C, #0E5935, #0F6870, #6e819f);
+}
