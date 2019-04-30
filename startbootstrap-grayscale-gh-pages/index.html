@@ -68,13 +68,15 @@
   <section id="about" class="about-section text-center">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
-          <p class="text-white-50">Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-            <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+        <div class="col-lg-12 mx-auto">
+          <h2 class="text-white mb-8">Zimbabwe</h2>
+          <p id="par" class="text-white-50" align="justify">Situado na porção sudeste do continente africano, o território do Zimbábue não possui saída para o mar e limita-se com Moçambique (a nordeste e a leste), África do Sul (ao sul), Botswana (a sudoeste e a oeste) e Zâmbia (ao norte e a noroeste). O nome do país significa “casa de pedra”, no dialeto chona.
+            Com predominância de clima tropical, Zimbábue possui belas paisagens naturais, sobretudo nas savanas que abrigam diversos animais selvagens. O solo é fértil, fato que possibilita a prática da agricultura. Os principais produtos cultivados são milho, tabaco, algodão, café, cana-de-açúcar, entre outros. Outra importante atividade econômica é a mineração, pois o país possui grandes reservas de ouro, níquel, amianto, etc.
+            Apesar desse potencial econômico, a nação sofre com diversos problemas econômicos, sociais e políticos. A maioria da população vive abaixo da linha de pobreza, ou seja, com menos de 1,25 dólar por dia; mais de 40% dos zimbabuanos são subnutridos; e muitos habitantes são portadores do vírus HIV, fato que reflete diretamente na baixa expectativa de vida (47 anos).
+            De acordo com relatório divulgado em 2010 pela Organização das Nações Unidas (ONU), o Índice de Desenvolvimento Humano (IDH) do Zimbábue é de apenas 0,140, sendo a pior média entre os 169 países que compõem o ranking mundial.</p>
         </div>
       </div>
-      <img src="img/ipad.png" class="img-fluid" alt="">
+
     </div>
   </section>
 
@@ -82,9 +84,9 @@
   <section id='videos'>
     <div class='container'>
       <div class='row'>
-        <div class='col-md-8 offset-md-2 text-center'>
+        <div class='col-md-8 offset-md-2 text-center' id="vidio">
           <h1>Veja Vídeos</h1>
-        <video id='video' poster='img/logan.jpg'width="600" controls>
+        <video id='video' poster='img/flagZimbabwe.jpg'width="600" height="302.5">
         <!--
           <source src='video/logan.mp4' type="video/mp4"/>
           -->
@@ -117,9 +119,9 @@
   </section>
   <section id='audios'>
 	<div class='conatiner'>
-		<div class='row'>
+		<div class='row' id="musica">
 			<div class='col-md-8 offset-md-2 text-center'>
-				<h1>Áudio</h1>
+				<h1 style="margin-top: 30px">Áudio</h1>
 					<h2 id='audio_title'></h2>
 					<audio id='audio' width="600" height="400">
 						<!--
@@ -144,7 +146,8 @@
 							 <i class="fa fa-2x fa-step-forward"></i>
 						 </a>
 						<input type='range' id='setvolume' step='0.1' min='0' max='1' value='0.5'
-						onchange='setVolumeAudio()'><span id='volpor'></span>
+            onchange='setVolumeAudio()'><span id='volpor'></span>
+            <div id="repro_audio"></div>
 					</div>
 			</div>
 		</div>
@@ -156,8 +159,83 @@
   <section id="projects" class="projects-section bg-light">
     <div class="container">
 
+      <!-- Project zero Row -->
+      <div class="row justify-content-center no-gutters">
+         
+          <div class="col-lg-12 order-lg-first">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-right">
+                  <h4 class="text-white" align="center">Gastronomia:</h4>
+                  <p class="mb-0 text-white-50" align="justify">
+                      O Zimbábue tem uma cultura muito rica, que envolve também uma culinária típica bem variada. 
+                      A tradicional comida do Zimbábue pode ser facilmente encontrada e provada na capital do país, Harare.
+                      A gastronomia do Zimbábue tem grande influência do Reino Unido, seu país colonizador. O Zimbábue só 
+                      teve sua independência do Reino Unido reconhecida em 1980.
+                      O solo do país africano é muito fértil, beneficiando a prática da agropecuária na região. 
+                      Por isso, a alimentação dos habitantes do Zimbábue conta com muitos legumes e verduras.
+                      Quem viajar para o Zimbábue vai notar que o Frango é a carne mais consumida no país. 
+                      Praticamente todos os dias é possível encontrar frango nas mesas na hora do almoço e do jantar.
+                      O viajante vai notar também que a culinária do Zimbábue é uma herança da cozinha britânica misturada
+                       aos pratos típicos africanos. Uma refeição padrão no Zimbábue conta com Sadza, um tipo de mingau de milho; 
+                       e Nyama, uma carne. Em muitos casos, para acompanhar a refeição vem a bebida mais popular do país, chamada de Chibuku.
+                      </p>
+                  <hr class="d-none d-lg-block mb-0 mr-0">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       <!-- Featured Project Row -->
-      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+      <div id="comidas" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#comidas" data-slide-to="0" class="active"></li>
+          <li data-target="#comidas" data-slide-to="1"></li>
+          <li data-target="#comidas" data-slide-to="2"></li>
+          <li data-target="#comidas" data-slide-to="3"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/sadza.jpg" alt="Sadza" width="1110" height="500">
+            <div class="carousel-caption">
+              <h3 class="h3">Sadza</h3>
+              <p class="leg">É um tipo de purê de milho ou arroz. Para comer esse prato não se usa talher. 
+                O mingau é acompanhado de legumes.</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="img/Porridge2.jpg" alt="Porridge" width="1110" height="500">
+            <div class="carousel-caption">
+              <h3 class="h3">Porridge</h3>
+              <p class="leg">É o mesmo tipo de mingau do Sadza, mas na versão doce. 
+                É comido no café da manhã.</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="img/Mapone-Worm.jpg" alt="Mapone-Worm" width="1110" height="500">
+            <div class="carousel-caption">
+              <h3 class="h3">Mapone-Worm</h3><br>
+              <p class="leg">É uma carne de lagarta, que é muito servida em festas.</p>
+            </div>  
+          </div>
+          <div class="carousel-item">
+              <img src="img/Matembo3.jpg" alt="Matembo" width="1110" height="500">
+              <div class="carousel-caption">
+                <h3 class="h3">Matembo</h3><br>
+                <p class="leg">É um tipo de peixe cru ao molho.</p>
+          </div>    
+        </div>
+        <a class="carousel-control-prev" href="#comidas" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#comidas" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+      
+      <!--<div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7 col-sm-6">
           <img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt="">
         </div>
@@ -167,7 +245,7 @@
             <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
           </div>
         </div>
-      </div>
+      </div>-->
 
       <!-- Project One Row -->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
@@ -178,8 +256,15 @@
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">Misty</h4>
-                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                <h4 class="text-white">Dados Geográficos:</h4>
+                <p class="mb-0 text-white-50" align="justify">O território é constituído por uma região planáltica coberta 
+                  de savanas, 
+                  sendo a altitude máxima de 2592 m no Monte Nyangani, a leste do país, próximo à fronteira com Moçambique.
+                </p>
+                <p class="mb-0 text-white-50" id="texto3" style="display: none">O solo é muito fértil, propício à agropecuária. A criação de gado bovino e a cultura do tabaco constituem 
+                   a principal riqueza económica. O subsolo guarda ouro, amianto, carvão e cromo. Ficam em seu território a 
+                   grande barragem de Kariba e as famosas Cataratas de Victoria (Victoria Falls).</p>
+                   <button class="btnText btn btn-primary paddingVer" onclick="showText('texto3', this)">Ler mais</button>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
@@ -196,14 +281,86 @@
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-right">
-                <h4 class="text-white">Mountains</h4>
-                <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                <h4 class="text-white">Estatísticas</h4>
+                <p class="mb-0 text-white-50" align="left">➢	Extensão territorial: 390.759 km².<br>
+                    ➢	Localização: África.<br>
+                    ➢	Capital: Harare.<br></p>
+
+
+
+                    <p class="mb-0 text-white-50" id="texto1" style="display: none" align="left">➢	Clima: Tropical.<br>
+                    ➢	Governo: República presidencialista.<br>
+                    ➢	Divisão administrativa: 10 províncias.<br>
+                    ➢	Idioma: Inglês (oficial), chona, sindebele.<br>
+                    ➢	Religiões: Cristianismo 71,5% (independentes 37,7%, protestantes 20,4%, católicos 10,9%, outros 2,5%), crenças tradicionais 26%, outras 1,3%, agnosticismo e ateísmo 1,2%.<br>
+                    ➢	População: 12.644.041 habitantes. (Homens: 6.117.632; Mulheres: 6.526.409).<br>
+                    ➢	Densidade demográfica: 32,3 hab./km².<br>
+                    ➢	Taxa média anual de crescimento populacional: 0,3%.<br>
+                    ➢	População residente em área urbana: 38,25%.<br>
+                    ➢	População residente em área rural: 61,75%.<br>
+                    ➢	Analfabetismo: 9%<br>
+                    ➢	População subnutrida: 40%.<br>
+                    ➢	Taxa de mortalidade infantil: 54 para cada mil nascidos vivos.<br>
+                    ➢	Esperança de vida ao nascer: 47 anos.<br>
+                    ➢	Domicílios com acesso a água potável: 81%.<br>
+                    ➢	Domicílios com acesso a rede sanitária: 46%.<br>
+                    ➢	Índice de Desenvolvimento Humano (IDH): 0,140.<br>
+                    ➢	Moeda: Dólar.<br>
+                    ➢	Produto Interno Bruto (PIB): 3,4 bilhões de dólares.<br>
+                    ➢	PIB per capita: 324 dólares.<br>
+                    ➢	Relações exteriores: Banco Mundial, FMI, OMC, ONU, SADC, UA.<br>
+                    ➢	Extensão:
+                    </p>
+                    <button class="btnText btn btn-primary paddingVer" onclick="showText('texto1', this)">Ler mais</button>
                 <hr class="d-none d-lg-block mb-0 mr-0">
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Project Tfree Row -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="img/demo-image-01.jpg" alt="">
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 class="text-white">Cultura</h4>
+                  <p class="mb-0 text-white-50" align="justify">
+                      Os artistas são valorizados no Zimbabwe e muitos conseguem viver da atividade no próprio país. 
+                      Ao contrário do que acontece em outros países africanos, cujos artistas muitas vezes são forçados 
+                      a ir para a Europa.</p>                      
+                      
+
+                      <p class="mb-0 text-white-50" id="texto2" style="display: none" align="justify">Nas artes tradicionais são destaques as obras de cerâmica, cestaria, tecidos pintados, 
+                      joias e esculturas em madeira.A música sempre foi uma parte importante da vida cultural. Algumas lendas da 
+                      África são cantadas em coro com a participação do público, e eventos sociais são realizados com o 
+                      acompanhamento de músicas[46] e instrumentos tradicionais como a marimba, o xilofone de madeira, e o mbira, 
+                      também conhecido como o "piano de polegar" e mujejeje, outro instrumento de percussão.
+                      No país encontra-se um dos poucos grandes edifícios antigos, feitos pelos nativos da África negra, 
+                      a cidadela do Grande Zimbabwe, monumento que nomeia o país.
+                      
+                      Os griots, jali ou jeli (djeli ou djéli na ortografia francesa), são os indivíduos que tinham o compromisso 
+                      de preservar e transmitir histórias, fatos históricos e os conhecimentos e as canções de seu povo. 
+                      Existem os griots músicos e os griots contadores de histórias. Eles ensinavam a arte, o conhecimento de 
+                      plantas, tradições, histórias e davam conselhos aos jovens príncipes. Vivem hoje em muitos lugares da África 
+                      ocidental, incluindo Mali, Gâmbia, Guiné, e Senegal, e estão presentes entre os mandês ou mandingas 
+                      (mandingas, malinquês, bambaras, etc.), fulas, hauçás, songais, tuculores, uolofes, sererês,
+                       mossis, dagombas, árabes da Mauritânia e muitos outros pequenos grupos. 
+                       A palavra poderá derivar da transliteração para o francês "guiriot" da palavra portuguesa "criado". 
+                       Além disso são eles os responsáveis por transmitir a tradição e a cultura. Em português (VOLP, 2009, p.412), 
+                       encontra-se a grafia griô.
+                      </p>
+                      <button class="btnText btn btn-primary paddingVer" onclick="showText('texto2', this)">Ler mais</button>
+                  <hr class="d-none d-lg-block mb-0 mr-0">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
     </div>
   </section>
@@ -304,6 +461,8 @@
   <script src="js/player.js"></script>
   <!-- Player de audio -->
   <script src="js/player_audio.js"></script>
+  <!--Função ler mais-->
+  <script src="js/myScript.js"></script>
 
 
 </body>

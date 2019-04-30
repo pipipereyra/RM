@@ -12,6 +12,7 @@
 #video-control{
 	background-color:transparent;
 	padding: 20px;
+	display: inline-block;
 	filter: opacity(50%);
 	transition: all 0.3s ease;
 }
@@ -75,6 +76,7 @@
 	border-radius: 10px;
 	background-color: #000000a8;
 	filter: opacity(100%);
+	display: inline-block;
 }
 
 /*@keyframes h1 {
@@ -89,6 +91,15 @@
 		animation-name: h1;
 		animation-duration: 4s;
 }*/
+
+#musica{
+	background-image: url(../img/ondas.png);
+	height: 300px;
+	background-size: 100%,cover;
+	background-repeat: no-repeat;
+	background-position: 0%, 0%, center;
+	
+}
 
 #audios h1{
 	font-family: hp;
@@ -125,6 +136,7 @@
 #repro_a{
 	background-color:transparent;
 	padding: 20px;
+	display: inline-block;
 	filter: opacity(50%);
 	transition: all 0.3s ease;
 }
@@ -133,4 +145,49 @@
 	border-radius: 10px;
 	background-color: #000000a8;
 	filter: opacity(100%);
+	display: inline-block;
+}
+.leg{
+	background-color:black;
+	display: inline-block;
+	padding: 10px;
+	border-radius: 10px;
+	filter: opacity(70%);
+}
+
+.h3{
+	background-color:black;
+	font-family: hp;
+	display: inline-block;
+	padding: 10px;
+	border-radius: 10px;
+	filter: opacity(70%);
+}
+#musica{
+	background-color: antiquewhite;
+}
+@media screen and (max-width: 870px){
+	#vidio{
+		background-size: 20%, 100%, 100%;
+	}
+	#video{
+		width: 90%;
+	}
+}
+
+@media (min-width: 992px){
+#mainNav.navbar-shrink .nav-link:hover{
+color: white;
+}
+}
+#about{
+	background-image: linear-gradient( black,white);
+	
+}
+#par{
+	background-color:black;
+	display: inline-block;
+	filter: opacity(70%);
+	padding: 10px;
+	border-radius: 10px;
 }

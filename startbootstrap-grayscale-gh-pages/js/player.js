@@ -1,9 +1,9 @@
 var listvideo = [];
 var indicevideo=0;
 	
-	listvideo = [{src:'video/logan.mp4', name:'Logan'},
-						{src:'video/VINGADORES 4.mp4', name:'Vingadores Ultimato'},
-						{src:'video/Grindelwald.mp4', name:'AFOH Crimes de Grindelwald'}];
+	listvideo = [{src:'video/hino.mp4', name:'Hino Nacional do Zimbabwe'},
+						{src:'video/zimbabwe.mp4', name:'Zimbabwe - Bob Marley'},
+						{src:'video/Zimbabwe2.mp4', name:'Zimbabwe - Roma'}];
 	
 	
 var loopa;
