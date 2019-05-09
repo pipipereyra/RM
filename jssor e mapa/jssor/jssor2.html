@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jssor.slider.min.js"></script>
+        <script>
+            jQuery(document).ready(function ($) {
+
+                var options = {
+                    $AutoPlay: 1,
+                    $Loop: 0,
+                    $SlideDuration: 250,
+                    $Idle: 500,
+                    $BulletNavigatorOptions: {
+                        $Class: $JssorBulletNavigator$,
+                        $ChanceToShow: 2
+                    }
+                };
+                var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+            });
+        </script>        
+
+        <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
+            <!-- Slides Container -->
+            <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 300px;">
+                <div><img u="image" src="img/image1.jpg" /></div>
+                <div><img u="image" src="img/image2.jpg" /></div>
+                <div><img u="image" src="img/image3.jpg" /></div>
+            </div>
+            
+            
+            <!--#region Bullet Navigator Skin Begin -->
+            <!-- Help: https://www.jssor.com/development/slider-with-bullet-navigator.html -->
+            <style type="text/css">
+                .jssorb062 {position:absolute;}
+                .jssorb062 .i {position:absolute;cursor:pointer;}
+                .jssorb062 .i .b {fill:#000;fill-opacity:.5;stroke:#fff;stroke-width:400;stroke-miterlimit:10;stroke-opacity:0.5;}
+                .jssorb062 .i:hover .b {fill-opacity:.8;}
+                .jssorb062 .iav .b {fill:#00fbff;fill-opacity:1;stroke:#00bbff;stroke-opacity:.7;stroke-width:2000;}
+                .jssorb062 .iav:hover .b {fill-opacity:.6;}
+                .jssorb062 .i.idn {opacity:.3;}
+            </style>
+
+            <!-- bullet navigator container -->
+            <div data-u="navigator" class="jssorb062" style="bottom:16px;right:250px;" data-autocenter="1" >
+                <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800" />
+                    </svg>
+                </div>
+            </div>
+            <!--#endregion Bullet Navigator Skin End -->
+
+            
+        </div>
+    </body>
+</html>
