@@ -19,11 +19,15 @@ function canvas_app(){
     r3.speed = 3;
     var key =0;
     const total = 1;
+
+
     var load =0;
     var loop = setInterval(isLoaded, 1000);
 
+
     var theme = new Audio();
     var smile = new Smile(canvas[0]);
+    var fruit = new Fruit(canvas[0]);
 
 
     function isLoaded(){
@@ -74,6 +78,8 @@ function canvas_app(){
         //box
         ctx.strokeStyle = "black";
         ctx.strokeRect(5,5,490,290);
+
+       
 
        /* //Retangulo
         ctx.fillStyle = "gray";
@@ -139,6 +145,7 @@ function canvas_app(){
             r3.move();
             smile.draw(ctx);
             smile.move(key);
+            fruit.draw(ctx);
         requestAnimationFrame(drawScreen);
     }
 

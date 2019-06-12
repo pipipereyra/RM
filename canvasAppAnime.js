@@ -5,22 +5,16 @@ function canvasApp(){
     var canvas = document.getElementById('canvas');
     var context = canvas.getContext('2d');
 
-    var brickImage = new Image();
-    brickImage.src = "img/brick.jpg";
-    brickImage.onload = drawScreen;
-
-
     drawScreen();
 
     function drawScreen(){
 
-        var pattern = context.createPattern(brickImage, "repeat");
         //gradiente
-         var lingrad = context.createLinearGradient(100,0,500,900);
-         lingrad.addColorStop(0.08,'white');
-         lingrad.addColorStop(0.18,"red");
-         lingrad.addColorStop(0.29,'red');
-         lingrad.addColorStop(0.3,'yellow');
+         var lingrad = context.createLinearGradient(0,0,500,0);
+         lingrad.addColorStop(0.08,'red');
+         lingrad.addColorStop(0.18,"white");
+         lingrad.addColorStop(0.78,'white');
+         lingrad.addColorStop(0.9,'purple');
          //context.fillStyle = "#000000";
          //context.fillStyle = lingrad;
          //context.fillText(message,x,y);
@@ -31,13 +25,13 @@ function canvasApp(){
         context.fillRect(0,0,500,300);
 
         //texto com gradiente
-        var textgrad = context.createLinearGradient(0,0,375,0);
+        var textgrad = context.createLinearGradient(0,0,500,0);
         
         textgrad.addColorStop(0.02,'blue');
         textgrad.addColorStop(0.5,"red");
         textgrad.addColorStop(0.8,'green');
         context.fillStyle = textgrad;
-        context.font = "19px Wild, arial";
+        context.font = "50px, sans-serif";
         var texto = "MDS ta tudo indo muito rápido, pelo menos estou entendendo";
         var tw = context.measureText(texto).width;
         var tx = 500/2 - tw/2;
@@ -49,7 +43,7 @@ function canvasApp(){
         //context.fillStyle = textgrad;
         //context.font = "50px, sans-serif";
         context.textBaseLine = 'top';
-        context.fillText(texto,tx,125);
+        context.fillText(texto,tx,50);
         //context.fillText("Mas Bah! Tchê, que barbaridade!!", 100,50);
         
         //gradiente radial
@@ -60,14 +54,11 @@ function canvasApp(){
         //                                  x0,y0,r0,x1,y1,r1
         var radial = context.createRadialGradient(cr,cr,1,cr,cr,50);
         radial.addColorStop(0.2,"yellow");
-        radial.addColorStop(0.6,"rgba(255,255,255,0.5)");
+        radial.addColorStop(0.6,"white");
 
         //Rect
-        context.fillStyle = pattern;
-        context.fillRect(xr,yr,wr,hr);
         context.fillStyle = radial;
         context.fillRect(xr,yr,wr,hr);
-        
         context.strokeStyle = 'black';
         context.strokeRect(xr,yr,wr,hr);
 
@@ -92,7 +83,7 @@ function canvasApp(){
             //text
 
             context.fillStyle = "#fff";
-            context.font = "20px, Wild";
+            context.font = "20px sans-serif";
             context.Baseline = "top";
             context.fillText("Olá Mundo!", 195, 210);
         
