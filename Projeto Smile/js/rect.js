@@ -2,8 +2,8 @@ class Rect{
     constructor(canvas){
         this.x = 100;
         this.y = 100;
-        this.w = 50;
-        this.h = 50;
+        this.w = 25;
+        this.h = 25;
         this.c = "green";
         this.direcao = "top";
         this.direcao2 = "right";

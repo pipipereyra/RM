@@ -4,7 +4,7 @@ class Smile{
         this.canvas = canvas;
         this.x=100;
         this.y=100;
-        this.r=30;
+        this.r=20;
         console.log("smile");
     }
     draw(ctx){
@@ -19,7 +19,7 @@ class Smile{
 
 
         //olho esquerdo
-        var olhoraio = 5;
+        var olhoraio = 4;
 
         ctx.beginPath();
         ctx.strokeStyle = "black";
@@ -32,7 +32,7 @@ class Smile{
 
         
         //olho direito
-        var olhoraiod = 5;
+        var olhoraiod = 4;
 
         ctx.beginPath();
         ctx.strokeStyle = "black";
@@ -50,7 +50,7 @@ class Smile{
         ctx.strokeStyle = "black";
         ctx.lineWidth = 1;
         840
-        ctx.arc(this.x,this.y, this.r-10, 0, 1*Math.PI, false);
+        ctx.arc(this.x,this.y, this.r-7, 0, 1*Math.PI, false);
         ctx.stroke();
         ctx.closePath();
 

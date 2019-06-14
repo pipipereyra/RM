@@ -5,8 +5,8 @@ function canvas_app(){
     var canvas = $('#canvas');
     var ctx = canvas[0].getContext('2d');
     //var xr = 10;
-    var direcaor1 = "top"; 
-    var direcaor2 = "esquerda";
+    /* var direcaor1 = "top"; 
+    var direcaor2 = "esquerda"; */
     var r1 = new Rect(canvas[0]);
     var r2 = new Rect(canvas[0]);
     var r3 = new Rect(canvas[0]);
@@ -22,6 +22,7 @@ function canvas_app(){
 
 
     var load =0;
+    var score= 0;
     var loop = setInterval(isLoaded, 1000);
 
 
@@ -146,6 +147,18 @@ function canvas_app(){
             smile.draw(ctx);
             smile.move(key);
             fruit.draw(ctx);
+
+            function colision(smile,fruit){
+                
+                if((smile.x - fruit.xf)**2+(smile.y-fruit.yf)**2 < (smile.r+fruit.rf)**2){
+                    console.log("Chegoooou");
+                    fruit.position();   
+                }
+                else{
+                        
+                }
+            } 
+        colision(smile, fruit);
         requestAnimationFrame(drawScreen);
     }
 

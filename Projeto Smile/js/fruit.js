@@ -21,7 +21,22 @@ class Fruit{
     }
 
     position(){
-        this.xf = Math.random() * this.canvas.width;
-        this.yf = Math.random() * this.canvas.height;
+        this.xf = Math.random() * this.canvas.width - this.rf;
+        this.yf = Math.random() * this.canvas.height - this.rf;
+
+        if(this.yf < this.rf){
+            this.yf = this.rf;
+        }
+        if(this.yf > this.canvas.height - this.rf){
+            this.yf = this.canvas.height-this.rf;
+        }
+        if(this.xf < this.rf){
+            this.xf = this.rf;
+        }
+        if(this.xf > this.canvas.width - this.rf){
+            this.xf = this.canvas.width - this.rf;
+        }
+
     }
+
 }
